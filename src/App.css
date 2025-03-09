@@ -1,38 +1,541 @@
-.App {
-  text-align: center;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0B0B45;
+  padding: 10px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-left .logo {
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-right {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav-top {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px; /* Space between buttons and menu */
+}
+
+.search-button, .login-button {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.search-button:hover, .login-button:hover {
+  background: white;
+  color: #F4BC1C;
+}
+.nav-menu li:hover{
+  color: #F4BC1C;
+}
+.nav-menu li a {
+  color: white;  /* Change to any color you want */
+  text-decoration: none; /* Removes underline */
+  font-weight: 500;
+}
+
+/* Change color on hover */
+li a:hover {
+  color: #F4BC1C; /* Change to desired hover color */
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+.nav-menu li{
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 570px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+  width:90%
 }
 
-@keyframes App-logo-spin {
+.hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 80px;
+  width:700px;
+  color:rgb(200, 196, 196);
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #F4BC1C;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Travel Section */
+/* Travel Section */
+.events-section {
+  background-color: #666;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.events-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f7fafc;
+}
+
+.events-section p {
+  font-size: 18px;
+  color: #f7fafc;
+  margin-bottom: 40px;
+}
+
+/* Travel Cards Grid */
+.events-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Individual Travel Card */
+.card {
+  background: #F4BC1C;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0B0B45;
+}
+
+.card-content p {
+  font-size: 16px;
+  color: #0B0B45;
+}
+
+/* Calendar Date Box */
+.date-box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #8C1515;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.date-box .month {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.date-box .day {
+  font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .travel-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Stories Section */
+.stories-section {
+  background-color: #f8f8f8;
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.stories-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stories-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.story-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.story-card h3 {
+  font-size: 20px;
+  margin: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.story-card p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 15px 20px;
+}
+
+/* Special Red Card */
+.red-card {
+  background: #0B0B45;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.red-card h3, .red-card p {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .story-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Departments Section */
+.departments-section {
+  text-align: center;
+  padding: 60px 10%;
+  background-color: #fff;
+}
+
+.departments-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0B0B45;
+}
+
+.departments-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Department Cards */
+.department-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.department-card {
+  background: #0B0B45;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.department-card:hover {
+  transform: scale(1.05);
+  color: #F4BC1C;
+}
+
+/* Department ID Number */
+.dept-id {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+/* Sliding Gallery */
+.sliding-gallery {
+  overflow: hidden;
+  background-color:#0B0B45;
+  padding: 20px 0;
+}
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 20px;
+  animation: slideAnimation 20s linear infinite;
+  width: max-content;
+}
+
+.gallery-item {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Continuous Scrolling Effect */
+@keyframes slideAnimation {
   from {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: translateX(-50%);
   }
+}
+
+
+
+.alumni-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background-color: #b71c1c;
+}
+
+
+.footer {
+  background: #f7fafc;
+  padding: 30px;
+  text-align: center;
+}
+
+.newsletter {
+  margin-bottom: 20px;
+}
+
+.newsletter input[type="email"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.newsletter label {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.newsletter button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.footer-links div {
+  flex: 1;
+  min-width: 150px;
+  text-align: left;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+.departments-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.departments-section h2 {
+  font-size: 28px;
+  color: #0B0B45;
+  margin-bottom: 10px;
+}
+
+.departments-section p {
+  font-size: 16px;
+  color: #0B0B45;
+  margin-bottom: 20px;
+}
+
+.department-cards {
+  display: flex;
+  justify-content: center; /* Center align the card */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.department-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #0B0B45;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 280px; /* Fixed width */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dept-id {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0B0B45; /* LinkedIn blue */
+  margin-bottom: 5px;
+}
+
+.department-card h3 {
+  font-size: 20px;
+  color: #F4BC1C;
 }

@@ -1,0 +1,164 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout for the entire feed */
+.news-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;  /* Keeps everything closer together */
+    margin: 0 auto;
+    padding-top: 20px;
+    gap: 15px; /* Reduces excessive spacing */
+}
+
+/* LEFT SIDEBAR (Profile) */
+.left-sidebar {
+    /* flex: 0 0 20%;  Fixed width */
+    width: 230px;
+}
+
+.profile-card {
+    background: white;
+    padding: 15px;
+    height: 350px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-pic-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-role {
+    font-size: 14px;
+    color: gray;
+}
+
+.profile-stats p {
+    font-size: 12px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* MAIN NEWS FEED */
+.news-feed {
+    flex: 1; /* Expands dynamically */
+    width: 500px;
+    margin: 0 20px;
+}
+
+.news-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 500px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header inside news feed */
+.news-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: gray;
+}
+
+.post-text {
+    font-size: 15px;
+    color: #444;
+    margin-top: 5px;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* News actions (Like, Comment, Share) */
+.news-actions {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.news-actions button {
+    background: none;
+    border: none;
+    color: #1877f2;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px;
+    transition: background 0.2s ease-in-out;
+}
+
+.news-actions button:hover {
+    background: rgba(24, 119, 242, 0.1);
+}
+
+/* RIGHT SIDEBAR (Trending) */
+.right-sidebar {
+    flex: 0 0 20%;
+    min-width: 230px;
+}
+
+.trending-news {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trending-news h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.trending-news ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.trending-news li {
+    margin-bottom: 12px;
+}
+
+.trending-news a {
+    text-decoration: none;
+    color: #0073b1;
+}
+
+.trending-news a:hover {
+    text-decoration: underline;
+}

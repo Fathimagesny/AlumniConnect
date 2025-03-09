@@ -1,0 +1,76 @@
+.mentorship-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .mentorship-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .mentorship-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .mentorship-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .mentorship-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    position: relative;
+  }
+  
+  .mentorship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mentorship-card h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .mentorship-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 768px) {
+    .mentorship-container h1 {
+      font-size: 2rem;
+    }
+  
+    .mentorship-container p {
+      font-size: 1rem;
+    }
+    
+    .mentorship-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

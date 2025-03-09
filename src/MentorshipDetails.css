@@ -1,0 +1,91 @@
+/* General Page Styling */
+.mentorship-details {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner Section */
+.mentorship-banner {
+    text-align: center;
+    position: relative;
+}
+
+.mentorship-banner img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.mentorship-banner h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Content Section */
+.mentorship-content {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Headings */
+.mentorship-content h2 {
+    font-size: 22px;
+    color: #222;
+    margin-top: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Lists */
+.mentorship-content ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.mentorship-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Contact & Application Info */
+.mentorship-content p {
+    margin-top: 10px;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Not Found Message */
+.not-found {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mentorship-details {
+        padding: 15px;
+    }
+    
+    .mentorship-banner h1 {
+        font-size: 24px;
+    }
+
+    .mentorship-content h2 {
+        font-size: 20px;
+    }
+
+    .mentorship-content p {
+        font-size: 15px;
+    }
+}
